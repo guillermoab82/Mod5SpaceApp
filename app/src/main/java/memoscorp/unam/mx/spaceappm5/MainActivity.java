@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ModelAPOD> call, Response<ModelAPOD> response) {
                 txtDate.setText(response.body().getDate().toString());
                 txtTitle.setText(response.body().getTitle().toString());
-                txtExplanation.setText(response.body().getExplanation());
+                txtExplanation.setText(response.body().getExplanation().toString());
                 Picasso.with(getApplicationContext()).load(response.body().getUrl()).into(img);
                 Log.d("ModelAPOD",response.body().getTitle());
             }
