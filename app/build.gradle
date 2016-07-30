@@ -11,10 +11,42 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs{
+        debug.initWith(signingConfigs.debug)
+        release {
+            /*
+            storeFile file("release.keystore")
+            storePassword"secretepasswa"
+            keyAñias "gradleforandroid"
+            keyPassword "secretpassword"
+             */
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String","BUILD_TYPEUNO","\"release\""
+            buildConfigField "String","URL","\"https://api.nasa.gov\""
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField "String","BUILD_TYPEUNO","\"debug\""
+            buildConfigField "String","URL","\"https://api.nasa.gov\""
+        }
+    }
+    productFlavors{
+        old_version{
+            applicationId "memoscorp.unam.mx.spaceappm5.old"
+        }
+
+        future_release{
+            applicationId "memoscorp.unam.mx.spaceappm5.feature"
+        }
+
+        actual{
+            applicationId "memoscorp.unam.mx.spaceappm5.actual"
         }
     }
 }
@@ -23,4 +55,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
