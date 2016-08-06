@@ -1,6 +1,7 @@
 package memoscorp.unam.mx.spaceappm5.data;
 
 import memoscorp.unam.mx.spaceappm5.model.ModelAPOD;
+import memoscorp.unam.mx.spaceappm5.model.ModelMarRoverPhotos;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -15,5 +16,8 @@ public interface ApodService {
 
     @GET("planetary/apod")
     Call<ModelAPOD> getTodayApodWithQuery(@Query("api_key") String apiKey);
+
+    @GET("mars-photos/api/v1/rovers/curiosity/photos")
+    Call<ModelMarRoverPhotos> getMarsRoverPhotos(@Query("sol") int sol, @Query("api_key") String apiKey);
 
 }
