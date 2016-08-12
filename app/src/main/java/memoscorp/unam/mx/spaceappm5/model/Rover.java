@@ -1,11 +1,12 @@
 package memoscorp.unam.mx.spaceappm5.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Rover {
+public class Rover implements Serializable{
 
     @SerializedName("id")
     private Integer id;

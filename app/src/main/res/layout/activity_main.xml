@@ -14,14 +14,14 @@
     tools:context="memoscorp.unam.mx.spaceappm5.MainActivity">
     <ImageView
         android:id="@+id/img_image"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="@dimen/imageMarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"/>
     <TextView
         android:id="@+id/txt_date"
         android:gravity="end"
-        android:text="Prueba"
+        tools:text="Prueba"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -29,14 +29,14 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        tools:text="Hello World!" />
     <TextView
         android:id="@+id/txt_explanation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btn_enviar"
-        android:text="Go to RecyclerView -->"
+        android:text="@string/btnSendRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

@@ -46,10 +46,15 @@ public class RecyclerViewActivity extends AppCompatActivity{
             public void onItemClick(Photo photo){
 
                 Intent intent = new Intent(RecyclerViewActivity.this,NasaDetailsActivity.class);
+                /**********************************************
+                 Esto se hace con un intent normal, lo de más
+                 abajo se hace pasando un obejto serializable,
+                 para eso en el modelo hay que agregar "implements Seralizable"
                 intent.putExtra("url",photo.getImgSrc());
                 intent.putExtra("fecha",photo.getEarthDate());
                 intent.putExtra("rovername",photo.getRover().getName());
-                intent.putExtra("numphotos",photo.getRover().getTotalPhotos());
+                intent.putExtra("numphotos",photo.getRover().getTotalPhotos());*/
+                intent.putExtra("photos",photo);
                 startActivity(intent);
                 //Toast.makeText(getApplicationContext(),photo.getImgSrc(),Toast.LENGTH_SHORT).show();
                 Log.d("PHOTO",photo.getImgSrc());
