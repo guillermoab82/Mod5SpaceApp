@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/share_today_apod"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="share"
+        android:showAsAction="always"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/add_favorites"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="favorites"
+        android:showAsAction="always"
+        app:showAsAction="always">
+    </item>
+</menu>

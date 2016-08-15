@@ -9,17 +9,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".app.NasaApplication">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity android:name=".MainActivity">
 
         </activity>
         <activity android:name=".RecyclerViewActivity">
+
+         </activity>
+        <activity android:name=".NasaDetailsActivity"></activity>
+        <activity android:name=".login.NasaApodLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-         </activity>
-        <activity android:name=".NasaDetailsActivity"></activity>
+        </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

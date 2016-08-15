@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SpaceAppM5</string>
     <string name="btnSendRecycler">Go to RecyclerView></string>
+    <string name="facebook_app_id">1144345058959659</string>
 </resources>

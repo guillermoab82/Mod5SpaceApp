@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class NasaDetailsActivity extends AppCompatActivity {
     @BindView(R.id.txt_urlimg_details) TextView UrlImg;
     @BindView(R.id.txt_rover_details) TextView RoverName;
     @BindView(R.id.txt_numphotos_details) TextView NumFotos;
+    @BindView(R.id.toolBar_Action) Toolbar Bar;
 
 
     @Override
@@ -30,6 +32,8 @@ public class NasaDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nasadetails);
         ButterKnife.bind(this);
+
+        setSupportActionBar(Bar);
 
         if(getIntent().getExtras()!=null) {
             /**************************************************************************************
