@@ -8,11 +8,4 @@
         android:showAsAction="always"
         app:showAsAction="always">
     </item>
-    <item
-        android:id="@+id/add_favorites"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="favorites"
-        android:showAsAction="always"
-        app:showAsAction="always">
-    </item>
 </menu>

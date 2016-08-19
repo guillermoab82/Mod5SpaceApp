@@ -49,7 +49,7 @@ public class NasaApodLoginActivity extends AppCompatActivity implements Facebook
 
     @Override
     public void onCancel() {
-        Snackbar.make(findViewById(android.R.id.content),"Login Cancel",Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(android.R.id.content),getResources().getText(R.string.msjLogCancel),Snackbar.LENGTH_SHORT).show();
     }
 
     @Override

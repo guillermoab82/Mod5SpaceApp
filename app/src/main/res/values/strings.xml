@@ -2,4 +2,13 @@
     <string name="app_name">SpaceAppM5</string>
     <string name="btnSendRecycler">Go to RecyclerView></string>
     <string name="facebook_app_id">1144345058959659</string>
+    <string name="navMenu_Listing">Mars Rover Image</string>
+    <string name="navMenu_Today">Today APOD</string>
+    <string name="navMenu_Favorites">Favorites</string>
+    <string name="msjAddFavorites">Added to favorites</string>
+    <string name="msj_error_data">There was an error loading data!!!</string>
+    <string name="msj_share_image">Image URL to share</string>
+    <string name="txtShare">Share</string>
+    <string name="msjNoFavs">No aggregated data to favorites!!!</string>
+    <string name="msjLogCancel">Login cancel</string>
 </resources>

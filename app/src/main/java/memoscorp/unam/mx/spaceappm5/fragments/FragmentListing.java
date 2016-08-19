@@ -108,7 +108,7 @@ public class FragmentListing extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.listing_menu,menu);
+        //inflater.inflate(R.menu.listing_menu,menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -116,7 +116,7 @@ public class FragmentListing extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.add_favorites_listing:
-                Snackbar.make(getView(),"Agregamos a favoritos",Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(getView(),getResources().getText(R.string.msjAddFavorites),Snackbar.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

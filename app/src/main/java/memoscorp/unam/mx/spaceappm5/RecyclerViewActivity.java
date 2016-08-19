@@ -39,6 +39,7 @@ import butterknife.ButterKnife;
 import memoscorp.unam.mx.spaceappm5.ViewApodListAdapter.NasaApodAdapter;
 import memoscorp.unam.mx.spaceappm5.data.ApodService;
 import memoscorp.unam.mx.spaceappm5.data.Data;
+import memoscorp.unam.mx.spaceappm5.fragments.FragmentFavorites;
 import memoscorp.unam.mx.spaceappm5.fragments.FragmentListing;
 import memoscorp.unam.mx.spaceappm5.fragments.FragmentTodayAPOD;
 import memoscorp.unam.mx.spaceappm5.model.ModelMarRoverPhotos;
@@ -94,6 +95,7 @@ public class RecyclerViewActivity extends AppCompatActivity{
                         getFragmentManager().beginTransaction().replace(R.id.main_container,new FragmentListing()).commit();
                         break;
                     case R.id.favorite_item:
+                        getFragmentManager().beginTransaction().replace(R.id.main_container,new FragmentFavorites()).commit();
                         break;
                 }
                 return false;

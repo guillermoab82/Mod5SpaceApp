@@ -5,4 +5,8 @@
     <dimen name="imageMarginTop">0dp</dimen>
     <dimen name="draweeViewHeight">250dp</dimen>
     <dimen name="viewLineHeight">1dp</dimen>
+    <dimen name="imagenFBDim">120dp</dimen>
+    <dimen name="headerMargin">15dp</dimen>
+    <dimen name="cardviewLayoutMargin">2dp</dimen>
+    <dimen name="cardviewSimpleDraweeHeight">250dp</dimen>
 </resources>

@@ -4,14 +4,14 @@
     android:layout_height="match_parent">
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/UsrFBPhoto"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/imagenFBDim"
+        android:layout_height="@dimen/imagenFBDim"
         android:src="@mipmap/ic_launcher"
-        android:layout_margin="15dp"/>
+        android:layout_margin="@dimen/headerMargin"/>
     <TextView
         android:id="@+id/UsrFBName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="HOLA BOLA"
-        android:layout_margin="15dp"/>
+        android:layout_margin="@dimen/headerMargin"/>
 </LinearLayout>

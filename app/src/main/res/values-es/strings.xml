@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpaceAppM5</string>
+    <string name="btnSendRecycler">Ir a RecyclerView></string>
+    <string name="navMenu_Listing">Imágenes del Rover en Marte</string>
+    <string name="navMenu_Today">Imagen Astronómica Diaria (APOD)</string>
+    <string name="navMenu_Favorites">Favoritos</string>
+    <string name="msjAddFavorites">Agregado a favoritos</string>
+    <string name="msj_error_data">Hubo un error al cargar los datos!!!</string>
+    <string name="msj_share_image">URL de imagen a compartir</string>
+    <string name="txtShare">Compartir</string>
+    <string name="msjNoFavs">No hay datos agregados a favoritos!!!</string>
+    <string name="msjLogCancel">Login cancelado</string>
+</resources>

@@ -95,11 +95,11 @@ public class FragmentTodayAPOD extends Fragment {
                 //En este caso como estamos en un fragment no se tiene el metodo findViewById
                 //por tal motivo lo sustituimos con getView()
                 //Snackbar.make(getView(),"Vamos a compartir",Snackbar.LENGTH_SHORT).show();
-                shareText("URL image "+img_url_share);
+                shareText(getResources().getText(R.string.msj_share_image)+" "+img_url_share);
                 return true;
-            case R.id.add_favorites:
+            /*case R.id.add_favorites:
                 Snackbar.make(getView(),"Agregado a favritos",Snackbar.LENGTH_SHORT).show();
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -110,6 +110,6 @@ public class FragmentTodayAPOD extends Fragment {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
         shareIntent.putExtra(Intent.EXTRA_TEXT,text);
-        startActivity(Intent.createChooser(shareIntent,"Compartir"));
+        startActivity(Intent.createChooser(shareIntent,getResources().getText(R.string.txtShare)));
     }
 }
