@@ -11,6 +11,7 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -25,13 +26,15 @@ import memoscorp.unam.mx.spaceappm5.RecyclerViewActivity;
 public class NasaApodLoginActivity extends AppCompatActivity implements FacebookCallback<LoginResult> {
     @BindView(R.id.fb_loging_button)
     LoginButton login;
+    @BindView(R.id.img_background)
+    SimpleDraweeView imgAtras;
     CallbackManager callBackManager;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nasaapodloginactivity);
         ButterKnife.bind(this);
-
+        imgAtras.setImageURI("http://apod.nasa.gov/apod/image/1609/LittlePlanetAstroCampSoponyai2048.jpg");
         callBackManager = CallbackManager.Factory.create();
         login.registerCallback(callBackManager,this);
 
