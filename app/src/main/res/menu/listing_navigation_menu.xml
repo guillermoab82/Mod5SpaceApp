@@ -3,18 +3,18 @@
     <group android:checkableBehavior="single">
         <item android:id="@+id/mars_rover_item"
             android:checkable="false"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_image_brightness_7"
             android:title="@string/navMenu_Listing">
         </item>
         <item
             android:id="@+id/today_apod_item"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_image_brightness_7"
             android:checkable="false"
             android:title="@string/navMenu_Today">
         </item>
         <item
             android:id="@+id/favorite_item"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_image_brightness_7"
             android:checkable="false"
             android:title="@string/navMenu_Favorites">
         </item>

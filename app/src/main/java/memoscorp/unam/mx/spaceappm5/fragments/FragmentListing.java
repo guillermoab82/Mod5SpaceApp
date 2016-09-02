@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Random;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import memoscorp.unam.mx.spaceappm5.NasaDetailsActivity;
@@ -35,6 +37,7 @@ import retrofit2.Response;
 public class FragmentListing extends Fragment {
     @BindView(R.id.rv_listMars) RecyclerView marsRoverListRecycler;
     String img;
+    int sol;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,7 +90,8 @@ public class FragmentListing extends Fragment {
 
                  ApodService apodService = Data.getRetrofitInstance().create(ApodService.class);
 
-                 Call<ModelMarRoverPhotos> modelMarRoverPhotosCall = apodService.getMarsRoverPhotos(1000,"7E4dAclCSWtztvWfQD94rji9VWWUKznWz0rJyR9J");
+                sol= (int) (Math.random()*500);
+                 Call<ModelMarRoverPhotos> modelMarRoverPhotosCall = apodService.getMarsRoverPhotos(sol,"7E4dAclCSWtztvWfQD94rji9VWWUKznWz0rJyR9J");
 
                  modelMarRoverPhotosCall.enqueue(new Callback<ModelMarRoverPhotos>() {
                 @Override
@@ -95,8 +99,12 @@ public class FragmentListing extends Fragment {
                 //marsRoverListRecycler.setAdapter(new NasaApodAdapter(response.body().getPhotos()));
                 //Log.d("modelMarRoverPhotosCall",response.body().getPhotos().get(0).getImgSrc().toString());
                 //Ahora para el Listener sigue lo siguiente
-                nasaApodAdapter.setMarsPhotos(response.body().getPhotos());
-                marsRoverListRecycler.setAdapter(nasaApodAdapter);
+                    if(response.body()!=null){
+                        nasaApodAdapter.setMarsPhotos(response.body().getPhotos());
+                        marsRoverListRecycler.setAdapter(nasaApodAdapter);
+                    }else{
+                        Snackbar.make(getView(),getResources().getText(R.string.msj_NoData),Snackbar.LENGTH_SHORT).show();
+                    }
                 }
 
                 @Override

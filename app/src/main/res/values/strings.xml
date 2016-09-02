@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SpaceAppM5</string>
     <string name="btnSendRecycler">Go to RecyclerView></string>
-    <string name="facebook_app_id">1144345058959659</string>
+    <string name="facebook_app_id" translatable="false">1144345058959659</string>
     <string name="navMenu_Listing">Mars Rover Image</string>
     <string name="navMenu_Today">Today APOD</string>
     <string name="navMenu_Favorites">Favorites</string>
@@ -11,4 +11,5 @@
     <string name="txtShare">Share</string>
     <string name="msjNoFavs">No aggregated data to favorites!!!</string>
     <string name="msjLogCancel">Login cancel</string>
+    <string name="msj_NoData">No Data,please try again!!!</string>
 </resources>

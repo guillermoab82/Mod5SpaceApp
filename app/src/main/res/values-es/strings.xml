@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SpaceAppM5</string>
     <string name="btnSendRecycler">Ir a RecyclerView></string>
@@ -11,4 +10,5 @@
     <string name="txtShare">Compartir</string>
     <string name="msjNoFavs">No hay datos agregados a favoritos!!!</string>
     <string name="msjLogCancel">Login cancelado</string>
+    <string name="msj_NoData">No hay datos, intenta otra vez!!!</string>
 </resources>
